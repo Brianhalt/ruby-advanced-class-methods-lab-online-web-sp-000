@@ -49,7 +49,7 @@ class Song
   end
 
   #initializes a song and artist_name based on the filename format
-  def self.new_from_filename(filename) 
+  def self.new_from_filename(filename)
     song_array = filename.split(" - ")
     song_array[1] = song_array[1].chomp(".mp3")
     song = self.new
@@ -66,7 +66,7 @@ class Song
     song.artist_name = result.artist_name
     song
   end
-  
+
   def self.destroy_all #clears all the song instances from the @@all array
     self.all.clear
   end
