@@ -10,7 +10,7 @@ class Song
     self.class.all << self
   end
 
-  def self.create # returns the song instance that was initialized and saved.
+  def self.create # instantiates and saves the song, and returns the new song created
     song = self.new
     self.all << song
     song
