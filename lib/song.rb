@@ -48,7 +48,8 @@ class Song
     sorted
   end
 
-  def self.new_from_filename(filename)
+  #initializes a song and artist_name based on the filename format
+  def self.new_from_filename(filename) 
     song_array = filename.split(" - ")
     song_array[1] = song_array[1].chomp(".mp3")
     song = self.new
@@ -57,6 +58,7 @@ class Song
     song
   end
 
+  #initializes and saves a song and artist_name based on the filename format
   def self.create_from_filename(filename)
     result = self.new_from_filename(filename)
     song = self.create
@@ -65,7 +67,7 @@ class Song
     song
   end
   
-  def self.destroy_all
+  def self.destroy_all #clears all the song instances from the @@all array
     self.all.clear
   end
 
