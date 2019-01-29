@@ -35,7 +35,7 @@ class Song
   def self.find_or_create_by_name(title)
     result = self.find_by_name(title)
     if result #invokes .find_by_name and .create_by_name instead of repeating code
-      result  
+      result
     else
       self.create_by_name(title)
   #returns the existing Song object (doesn't create a new one) when provided the title of an existing Song
