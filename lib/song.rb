@@ -10,15 +10,10 @@ class Song
     self.class.all << self
   end
 
-  def initialize(name,artist)
-      @name = name
-      @artist =
-      @@all << self
-  end
-
-
   def create
-
+    song = self.new
+    self.all << song
+    song
   end
 
   def new_by_name
@@ -45,8 +40,8 @@ class Song
 
   end
 
-  def create_from_filename
-
+  def self.create_from_filename
+    
   end
 
   def self.destroy_all
