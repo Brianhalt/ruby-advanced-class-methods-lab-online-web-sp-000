@@ -27,7 +27,7 @@ class Song
     song.name = title
     song
   end
-    
+
   def self.find_by_name(name) #can find a song present in @@all by name
     @@all.find{|person| person.name == name}
   end  #returns falsey when a song name is not present in @@all
@@ -60,10 +60,3 @@ class Song
 
 
 end
-
-
-
-
-
-
-
