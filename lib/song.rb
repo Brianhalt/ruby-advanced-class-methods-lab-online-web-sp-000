@@ -16,14 +16,16 @@ class Song
     song
   end
 
-  def self.new_by_name(title)
+  def self.new_by_name(title) #instantiates a song with a name property
     song = self.new
     song.name = title
     song
   end
 
-  def create_by_name
-
+  def self.create_by_name(title)
+    song = self.create
+    song.name = title
+    song
   end
 
   def find_by_name
