@@ -22,12 +22,15 @@ class Song
     song
   end
 
-  def self.create_by_name(title)
+  def self.create_by_name(title) #instantiates and saves a song with a name property
     song = self.create
     song.name = title
     song
   end
 
+  #can find a song present in @@all by name
+  #returns falsey when a song name is not present in @@all
+    returns falsey when a song name is not present in @@all
   def self.find_by_name(name)
     @@all.find{|person| person.name == name}
   end
