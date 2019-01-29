@@ -27,20 +27,23 @@ class Song
     song.name = title
     song
   end
-
-  #can find a song present in @@all by name
-  #returns falsey when a song name is not present in @@all
-    returns falsey when a song name is not present in @@all
-  def self.find_by_name(name)
+    
+  def self.find_by_name(name) #can find a song present in @@all by name
     @@all.find{|person| person.name == name}
+  end  #returns falsey when a song name is not present in @@all
+
+  def self.find_or_create_by_name(title)
+    result = self.find_by_name(title)
+    if result
+      result
+    else
+      self.create_by_name(title)
+    end
   end
 
-  def find_or_create_by_name
-
-  end
-
-  def alphabetical
-
+  def self.alphabetical
+    sorted = self.all.sort_by {|song| song.name}
+    sorted
   end
 
   def new_from_filename
@@ -57,3 +60,10 @@ class Song
 
 
 end
+
+
+
+
+
+
+
